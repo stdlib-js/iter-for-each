@@ -37,7 +37,6 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-has-own-property": "^0.0.x",
     "@stdlib/assert-is-function": "^0.0.x",
     "@stdlib/assert-is-iterator-like": "^0.0.x",
     "@stdlib/symbol-iterator": "^0.0.x",
