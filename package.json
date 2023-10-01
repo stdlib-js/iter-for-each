@@ -47,7 +47,7 @@
   "devDependencies": {
     "@stdlib/bench": "^0.1.0",
     "@stdlib/math-base-assert-is-nan": "^0.1.0",
-    "@stdlib/random-iter-randu": "^0.0.6",
+    "@stdlib/random-iter-randu": "^0.1.0",
     "@stdlib/utils-noop": "^0.1.0",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
