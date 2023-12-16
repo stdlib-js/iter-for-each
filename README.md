@@ -29,7 +29,7 @@ limitations under the License.
   <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
 </details>
 
-# forEach Iterator
+# iterForEach
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-for-each
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-iterForEach = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var iterForEach = require( 'path/to/vendor/umd/iter-for-each/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.iterForEach;
-})();
-</script>
+var iterForEach = require( '@stdlib/iter-for-each' );
 ```
 
 #### iterForEach( iterator, fcn\[, thisArg] )
@@ -112,17 +104,17 @@ The returned iterator protocol-compliant object has the following properties:
 -   **next**: function which returns an iterator protocol-compliant object containing the next iterated value (if one exists) assigned to a `value` property and a `done` property having a `boolean` value indicating whether the iterator is finished.
 -   **return**: function which closes an iterator and returns a single (optional) argument in an iterator protocol-compliant object.
 
-The invoked `function` is provided two arguments:
+The invoked function is provided two arguments:
 
--   `value`: iterated value
--   `index`: iteration index (zero-based)
+-   **value**: iterated value
+-   **index**: iteration index (zero-based)
 
 ```javascript
 var array2iterator = require( '@stdlib/array-to-iterator' );
 
-function assert( v ) {
-    if ( v !== v ) {
-        throw new Error( 'should not be NaN' );
+function assert( v, i ) {
+    if ( i < 0 ) {
+        throw new Error( 'unexpected Error' );
     }
 }
 
@@ -141,7 +133,7 @@ r = it.next().value;
 // ...
 ```
 
-To set the function execution context, provide a `thisArg`.
+To set the execution context for `fcn`, provide a `thisArg`.
 
 ```javascript
 var array2iterator = require( '@stdlib/array-to-iterator' );
@@ -197,15 +189,10 @@ var count = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-nan@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-iter-randu' );
+var isnan = require( '@stdlib/math-base-assert-is-nan' );
+var iterForEach = require( '@stdlib/iter-for-each' );
 
 function assert( v ) {
     if ( isnan( v ) ) {
@@ -231,11 +218,6 @@ while ( true ) {
     }
     console.log( r.value );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -335,7 +317,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/iter/map]: https://github.com/stdlib-js/iter-map/tree/umd
+[@stdlib/iter/map]: https://github.com/stdlib-js/iter-map
 
 <!-- </related-links> -->
 
