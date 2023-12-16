@@ -29,7 +29,7 @@ limitations under the License.
   <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
 </details>
 
-# forEach Iterator
+# iterForEach
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -104,17 +104,17 @@ The returned iterator protocol-compliant object has the following properties:
 -   **next**: function which returns an iterator protocol-compliant object containing the next iterated value (if one exists) assigned to a `value` property and a `done` property having a `boolean` value indicating whether the iterator is finished.
 -   **return**: function which closes an iterator and returns a single (optional) argument in an iterator protocol-compliant object.
 
-The invoked `function` is provided two arguments:
+The invoked function is provided two arguments:
 
--   `value`: iterated value
--   `index`: iteration index (zero-based)
+-   **value**: iterated value
+-   **index**: iteration index (zero-based)
 
 ```javascript
 var array2iterator = require( '@stdlib/array-to-iterator' );
 
-function assert( v ) {
-    if ( v !== v ) {
-        throw new Error( 'should not be NaN' );
+function assert( v, i ) {
+    if ( i < 0 ) {
+        throw new Error( 'unexpected Error' );
     }
 }
 
@@ -133,7 +133,7 @@ r = it.next().value;
 // ...
 ```
 
-To set the function execution context, provide a `thisArg`.
+To set the execution context for `fcn`, provide a `thisArg`.
 
 ```javascript
 var array2iterator = require( '@stdlib/array-to-iterator' );
