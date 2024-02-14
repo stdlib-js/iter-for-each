@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterForEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@esm/index.mjs';
+import iterForEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@v0.2.0-esm/index.mjs';
 ```
 
 #### iterForEach( iterator, fcn\[, thisArg] )
@@ -181,7 +181,7 @@ var count = ctx.count;
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
 import isnan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-nan@esm/index.mjs';
-import iterForEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@esm/index.mjs';
+import iterForEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-for-each@v0.2.0-esm/index.mjs';
 
 function assert( v ) {
     if ( isnan( v ) ) {
