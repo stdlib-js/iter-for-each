@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-for-each",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Create an iterator which invokes a function for each iterated value before returning the iterated value.",
   "license": "Apache-2.0",
   "author": {
@@ -37,17 +37,17 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-function": "^0.1.1",
-    "@stdlib/assert-is-iterator-like": "^0.1.1",
-    "@stdlib/string-format": "^0.1.1",
-    "@stdlib/symbol-iterator": "^0.1.1",
-    "@stdlib/types": "^0.2.0",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1"
+    "@stdlib/assert-is-function": "^0.2.0",
+    "@stdlib/assert-is-iterator-like": "^0.2.0",
+    "@stdlib/string-format": "^0.2.0",
+    "@stdlib/symbol-iterator": "^0.2.0",
+    "@stdlib/types": "^0.3.1",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/math-base-assert-is-nan": "^0.1.1",
     "@stdlib/random-iter-randu": "^0.1.0",
-    "@stdlib/utils-noop": "^0.1.1",
+    "@stdlib/utils-noop": "^0.2.0",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
