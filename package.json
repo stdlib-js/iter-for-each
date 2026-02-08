@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-for-each",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Create an iterator which invokes a function for each iterated value before returning the iterated value.",
   "license": "Apache-2.0",
   "author": {
@@ -37,18 +37,18 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-function": "^0.2.2",
-    "@stdlib/assert-is-iterator-like": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/assert-is-function": "^0.2.3",
+    "@stdlib/assert-is-iterator-like": "^0.2.3",
+    "@stdlib/string-format": "^0.2.3",
     "@stdlib/symbol-iterator": "^0.2.2",
     "@stdlib/types": "^0.4.3",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
   "devDependencies": {
-    "@stdlib/math-base-assert-is-nan": "^0.2.2",
+    "@stdlib/math-base-assert-is-nan": "^0.2.3",
     "@stdlib/random-iter-randu": "^0.2.1",
-    "@stdlib/utils-noop": "^0.2.2",
+    "@stdlib/utils-noop": "^0.2.3",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
